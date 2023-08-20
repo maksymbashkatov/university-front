@@ -1,0 +1,19 @@
+@font-face {
+  font-weight: 400;
+  font-family: Lexend;
+  src: url("./Lexend-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Lexend;
+  src: url("./Lexend-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Lexend;
+  src: url("./Lexend-Bold.ttf");
+}
+
+$mainFont: Lexend;

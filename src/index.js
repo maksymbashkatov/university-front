@@ -1,11 +1,12 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
-import MainPage from "./pages/MainPage";
-import NoPage from "./pages/NoPage";
+import "./index.scss";
+import SignIn from "./components/pages/sign-in/SignIn";
+import SignUp from "./components/pages/sign-up/SignUp";
+import ForgotPassword from "./components/pages/forgot-password/ForgotPassword";
+import ResetPassword from "./components/pages/reset-password/ResetPassword";
+import MainPage from "./components/pages/main-page/MainPage";
+import NoPage from "./components/pages/no-page/NoPage";
 
 export default function App() {
   return (

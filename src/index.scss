@@ -1,0 +1,15 @@
+@import "fonts/fonts.scss";
+
+html,
+body,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: {
+    family: $mainFont;
+    size: 14px;
+    weight: 400;
+  }
+  color: #505e68;
+}

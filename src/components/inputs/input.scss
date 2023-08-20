@@ -1,0 +1,45 @@
+.form-control {
+  display: flex;
+  flex-flow: column;
+
+  input {
+    padding: 12px 16px;
+    border-width: 1px;
+    border-style: inset;
+    border-color: #685050;
+  }
+
+  input:focus-visible {
+    border-width: 1px;
+    border-style: inset;
+    border-color: #0101ff;
+    outline: 0px;
+    border-radius: 0px;
+    color: #0101ff;
+  }
+
+  label {
+    text-align: justify;
+  }
+}
+
+.show-password-checkbox {
+  display: flex;
+  gap: 16px;
+  font-weight: 500;
+
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.sign-in-submit {
+  height: 56px;
+  background-color: #7101ff;
+  color: #ffffff;
+  font: {
+    size: 16px;
+    weight: 500;
+  }
+}

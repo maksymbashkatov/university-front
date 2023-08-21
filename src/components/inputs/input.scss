@@ -4,18 +4,18 @@
 
   input {
     padding: 12px 16px;
-    border-width: 1px;
-    border-style: inset;
-    border-color: #685050;
+    border: 1px solid #cad2d6;
+    font-size: 15px;
+    color: #000000;
+  }
+
+  input::placeholder {
+    color: #909fa9;
   }
 
   input:focus-visible {
-    border-width: 1px;
-    border-style: inset;
-    border-color: #0101ff;
-    outline: 0px;
-    border-radius: 0px;
-    color: #0101ff;
+    padding: 11px 15px;
+    border: 2px solid #0101ff;
   }
 
   label {
@@ -26,7 +26,9 @@
 .show-password-checkbox {
   display: flex;
   gap: 16px;
-  font-weight: 500;
+  font: {
+    weight: 500;
+  }
 
   input {
     width: 20px;
@@ -42,4 +44,8 @@
     size: 16px;
     weight: 500;
   }
+}
+
+.sign-in-submit:hover {
+  background-color: #3333ff;
 }

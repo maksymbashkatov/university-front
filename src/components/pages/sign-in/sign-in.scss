@@ -1,6 +1,15 @@
 form {
-  max-width: 376px;
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: 32px;
+}
+
+.signInContainer {
+  width: 376px;
+  display: grid;
+  grid-gap: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }

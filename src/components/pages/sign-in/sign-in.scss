@@ -4,12 +4,14 @@ form {
 }
 
 .signInContainer {
-  width: 376px;
+  display: grid;
+  height: 100vh;
+}
+
+.signInContent {
   display: grid;
   grid-gap: 32px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+  width: 376px;
+  justify-self: center;
+  align-self: center;
 }

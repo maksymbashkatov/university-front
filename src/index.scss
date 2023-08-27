@@ -1,4 +1,5 @@
-@import "fonts/fonts.scss";
+@import 'fonts/fonts.scss';
+@import './colors.scss';
 
 html,
 body,
@@ -14,8 +15,8 @@ input {
     weight: 400;
   }
 
-  color: #505e68;
-  background: #ffffff;
+  color: $colorText;
+  background: $colorBack;
 }
 
 input {

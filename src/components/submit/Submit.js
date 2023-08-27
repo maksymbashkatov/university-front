@@ -1,6 +1,6 @@
-import "./input.scss";
+import "./submit.scss";
 
-function SubmitInput() {
+function Submit() {
   return (
     <input
       className="sign-in-submit"
@@ -11,4 +11,4 @@ function SubmitInput() {
   );
 }
 
-export default SubmitInput;
+export default Submit;

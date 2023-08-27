@@ -1,0 +1,15 @@
+.show-password-checkbox {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  font: {
+    weight: 500;
+  }
+
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}

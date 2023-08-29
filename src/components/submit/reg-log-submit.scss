@@ -1,4 +1,4 @@
-.sign-in-submit {
+.reg-log-submit {
   height: 56px;
   background-color: #7101ff;
   color: #ffffff;
@@ -8,6 +8,10 @@
   }
 }
 
-.sign-in-submit:hover {
+.reg-log-submit:hover {
   background-color: #3333ff;
+}
+
+.reg-log-submit:active {
+  background-color: #0000e0;
 }

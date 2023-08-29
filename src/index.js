@@ -1,14 +1,14 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./index.scss";
-import SignIn from "./components/pages/sign-in/SignIn";
-import SignUp from "./components/pages/sign-up/SignUp";
-import ForgotPassword from "./components/pages/forgot-password/ForgotPassword";
-import ResetPassword from "./components/pages/reset-password/ResetPassword";
-import MainPage from "./components/pages/main-page/MainPage";
-import NoPage from "./components/pages/no-page/NoPage";
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './index.scss';
+import SignIn from './components/pages/sign-in/SignIn';
+import SignUp from './components/pages/sign-up/SignUp';
+import ForgotPassword from './components/pages/forgot-password/ForgotPassword';
+import ResetPassword from './components/pages/reset-password/ResetPassword';
+import MainPage from './components/pages/main-page/MainPage';
+import NoPage from './components/pages/no-page/NoPage';
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -23,5 +23,5 @@ export default function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);

@@ -2,16 +2,16 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './sign-in.scss';
 import Checkbox from '../../checkbox/Checkbox';
-import Submit from '../../submit/Submit';
-import Header from '../../header/Header';
+import Submit from '../../submit/RegLogSubmit';
+import Header from '../../headers/RegLogHeader';
 import Input from '../../input/Input';
 
-function SignIn() {
+export default function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordInputType, setPasswordInputType] = useState('password');
 
-  const changePasswordInputType = (e) => {
+  const changePasswordInputType = () => {
     if (passwordInputType === 'password') {
       setPasswordInputType('text');
     } else {
@@ -22,13 +22,13 @@ function SignIn() {
   return (
     <div className="signInContainer">
       <div className="signInContent">
-        <Header />
+        <Header h1="Welcome!" />
         <form>
           <Input
             title="Email"
             name="email"
             value={email}
-            onChangeFunc={(e) => setEmail(e.target.email)}
+            onChangeFunc={(e) => setEmail(e.target.value)}
             placeholder="name@mail.com"
           />
           <Input
@@ -36,14 +36,10 @@ function SignIn() {
             title="Password"
             name="password"
             value={password}
-            onChangeFunc={(e) => setPassword(e.target.password)}
+            onChangeFunc={(e) => setPassword(e.target.value)}
           />
-          <Checkbox
-            onClickFunc={(e) =>
-              changePasswordInputType(e.target.passwordInputType)
-            }
-          />
-          <Submit />
+          <Checkbox onClickFunc={(e) => changePasswordInputType()} />
+          <Submit value="Login" />
         </form>
       </div>
     </div>
@@ -52,5 +48,3 @@ function SignIn() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<SignIn />);
-
-export default SignIn;

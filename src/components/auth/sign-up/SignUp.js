@@ -1,9 +1,9 @@
 import './sign-up.scss';
 import { useState } from 'react';
-import Header from '../../headers/RegLogHeader';
-import Input from '../../input/Input';
-import Checkbox from '../../checkbox/Checkbox';
-import Submit from '../../submit/RegLogSubmit';
+import Header from '../common/header/Header';
+import Input from '../common/input/Input';
+import Checkbox from '../common/checkbox/Checkbox';
+import Submit from '../common/submit/Submit';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
@@ -63,7 +63,7 @@ export default function SignUp() {
             }}
             error={error}
           />
-          <Checkbox onClickFunc={() => changePasswordInputType()} />
+          <Checkbox onClick={() => changePasswordInputType()} />
           <Submit value="Register" />
         </form>
       </div>

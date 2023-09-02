@@ -1,12 +1,12 @@
+import './index.scss';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.scss';
-import SignIn from './components/pages/sign-in/SignIn';
-import SignUp from './components/pages/sign-up/SignUp';
-import ForgotPassword from './components/pages/forgot-password/ForgotPassword';
-import ResetPassword from './components/pages/reset-password/ResetPassword';
-import MainPage from './components/pages/main-page/MainPage';
-import NoPage from './components/pages/no-page/NoPage';
+import MainPage from './components/auth/main-page/MainPage';
+import SignIn from './components/auth/sign-in/SignIn';
+import SignUp from './components/auth/sign-up/SignUp';
+import ForgotPassword from './components/auth/forgot-password/ForgotPassword';
+import ResetPassword from './components/auth/reset-password/ResetPassword';
+import NoPage from './components/no-page/NoPage';
 
 function App() {
   return (

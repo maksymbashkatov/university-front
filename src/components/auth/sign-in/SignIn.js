@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import './sign-in.scss';
-import Checkbox from '../../checkbox/Checkbox';
-import Submit from '../../submit/RegLogSubmit';
-import Header from '../../headers/RegLogHeader';
-import Input from '../../input/Input';
+import Header from '../common/header/Header';
+import Input from '../common/input/Input';
+import Checkbox from '../common/checkbox/Checkbox';
+import Submit from '../common/submit/Submit';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -38,13 +37,10 @@ export default function SignIn() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Checkbox onClickFunc={(e) => changePasswordInputType()} />
+          <Checkbox onClick={(e) => changePasswordInputType()} />
           <Submit value="Login" />
         </form>
       </div>
     </div>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<SignIn />);

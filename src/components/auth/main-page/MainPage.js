@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const ResetPassword = () => {
+export default function MainPage() {
   return (
     <>
       <h1>Main Page</h1>
@@ -22,6 +22,4 @@ const ResetPassword = () => {
       </nav>
     </>
   );
-};
-
-export default ResetPassword;
+}

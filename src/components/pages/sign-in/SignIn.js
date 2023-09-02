@@ -28,7 +28,7 @@ export default function SignIn() {
             title="Email"
             name="email"
             value={email}
-            onChangeFunc={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="name@mail.com"
           />
           <Input
@@ -36,7 +36,7 @@ export default function SignIn() {
             title="Password"
             name="password"
             value={password}
-            onChangeFunc={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <Checkbox onClickFunc={(e) => changePasswordInputType()} />
           <Submit value="Login" />

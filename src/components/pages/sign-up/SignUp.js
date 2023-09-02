@@ -10,10 +10,7 @@ export default function SignUp() {
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
   const [passwordInputType, setPasswordInputType] = useState('password');
-  const [confirmPasswordLabelColor, setConfirmPasswordLabelColor] =
-    useState('');
-  const [confirmPasswordBorder, setConfirmPasswordBorder] = useState('');
-  // '1px solid #da1b41'
+  const [error, setError] = useState(false);
 
   const changePasswordInputType = () => {
     if (passwordInputType === 'password') {
@@ -35,8 +32,7 @@ export default function SignUp() {
           onSubmit={(e) => {
             if (!isPasswordConfirmed(password1, password2)) {
               e.preventDefault();
-              setConfirmPasswordLabelColor('#da1b41');
-              setConfirmPasswordBorder('1px solid #da1b41');
+              setError(true);
             }
           }}
         >
@@ -44,7 +40,7 @@ export default function SignUp() {
             title="Email"
             name="email"
             value={email}
-            onChangeFunc={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="name@mail.com"
           />
           <Input
@@ -52,7 +48,7 @@ export default function SignUp() {
             title="Password"
             name="password1"
             value={password1}
-            onChangeFunc={(e) => {
+            onChange={(e) => {
               setPassword1(e.target.value);
             }}
           />
@@ -61,11 +57,11 @@ export default function SignUp() {
             title="Confirm Password"
             name="password2"
             value={password2}
-            onChangeFunc={(e) => {
+            onChange={(e) => {
+              setError(false);
               setPassword2(e.target.value);
             }}
-            labelColor={confirmPasswordLabelColor}
-            inputBorderColor={confirmPasswordBorder}
+            error={error}
           />
           <Checkbox onClickFunc={() => changePasswordInputType()} />
           <Submit value="Register" />

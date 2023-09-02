@@ -3,25 +3,33 @@ import { useState } from 'react';
 
 export default function Input(props) {
   const [focused, setFocused] = useState(false);
+  const { onChange, error, id, name, title, type, value, placeholder } = props;
 
   return (
     <div className="form-control">
       <label
-        for={props.for || props.name}
-        style={{ color: focused ? '#0101ff' : props.labelColor || '' }}
+        for={id || name}
+        style={{ color: focused ? '#0101ff' : error ? '#da1b41' : '' }}
       >
-        {props.title}
+        {title}
       </label>
       <input
-        style={{ border: props.inputBorderColor }}
-        id={props.id || props.name}
-        type={props.type || props.name}
-        name={props.name}
-        value={props.value}
-        onChange={props.onChangeFunc}
+        // required
+        style={{
+          outline: focused
+            ? '2px solid #0101ff'
+            : error
+            ? '1px solid #da1b41'
+            : '',
+        }}
+        id={id || name}
+        type={type || name}
+        name={name}
+        value={value}
+        onChange={onChange}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
-        placeholder={props.placeholder || ''}
+        placeholder={placeholder || ''}
       />
     </div>
   );

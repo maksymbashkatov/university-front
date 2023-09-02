@@ -1,13 +1,13 @@
 @import 'fonts/fonts.scss';
 @import './colors.scss';
 
-html,
-body,
-h1,
-input {
+* {
   margin: 0;
   padding: 0;
   border: none;
+  box-sizing: border-box;
+  outline: 0px;
+  border-radius: 0px;
 
   font: {
     family: $mainFont;
@@ -17,9 +17,4 @@ input {
 
   color: $colorText;
   background: $colorBack;
-}
-
-input {
-  outline: 0px;
-  border-radius: 0px;
 }

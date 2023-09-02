@@ -4,6 +4,7 @@ import { useState } from 'react';
 export default function Input(props) {
   const [focused, setFocused] = useState(false);
   const { onChange, error, id, name, title, type, value, placeholder } = props;
+  // const inputOutlineStyle =
 
   return (
     <div className="form-control">

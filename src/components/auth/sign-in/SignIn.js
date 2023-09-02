@@ -1,5 +1,5 @@
+import '../common/styles/auth.scss';
 import { useState } from 'react';
-import './sign-in.scss';
 import Header from '../common/header/Header';
 import Input from '../common/input/Input';
 import Checkbox from '../common/checkbox/Checkbox';
@@ -19,8 +19,8 @@ export default function SignIn() {
   };
 
   return (
-    <div className="signInContainer">
-      <div className="signInContent">
+    <div className="authContainer">
+      <div className="authContent">
         <Header h1="Welcome!" />
         <form>
           <Input

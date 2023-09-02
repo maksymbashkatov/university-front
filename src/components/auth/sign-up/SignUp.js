@@ -1,4 +1,4 @@
-import './sign-up.scss';
+import '../common/styles/auth.scss';
 import { useState } from 'react';
 import Header from '../common/header/Header';
 import Input from '../common/input/Input';
@@ -25,8 +25,8 @@ export default function SignUp() {
   };
 
   return (
-    <div className="signUpContainer">
-      <div className="signUpContent">
+    <div className="authContainer">
+      <div className="authContent">
         <Header h1="Register your account" />
         <form
           onSubmit={(e) => {

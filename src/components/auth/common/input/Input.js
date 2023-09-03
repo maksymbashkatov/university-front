@@ -4,7 +4,14 @@ import { useState } from 'react';
 export default function Input(props) {
   const [focused, setFocused] = useState(false);
   const { onChange, error, id, name, title, type, value, placeholder } = props;
-  // const inputOutlineStyle =
+
+  const inputOutlineStyle = () => {
+    if (focused) {
+      return '2px solid #0101ff';
+    } else if (error) {
+      return '1px solid #da1b41';
+    }
+  };
 
   return (
     <div className="form-control">
@@ -17,11 +24,7 @@ export default function Input(props) {
       <input
         // required
         style={{
-          outline: focused
-            ? '2px solid #0101ff'
-            : error
-            ? '1px solid #da1b41'
-            : '',
+          outline: inputOutlineStyle(),
         }}
         id={id || name}
         type={type || name}

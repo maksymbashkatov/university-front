@@ -1,9 +1,12 @@
 import '../common/styles/auth.scss';
+import '../reset-password/reset-password.scss';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../common/header/Header';
 import Input from '../common/input/Input';
 import Checkbox from '../common/checkbox/Checkbox';
 import Submit from '../common/submit/Submit';
+import Button from '../common/button/Button';
 
 export default function SignIn() {
   const [password1, setPassword1] = useState('');
@@ -11,6 +14,11 @@ export default function SignIn() {
   const [passwordInputType, setPasswordInputType] = useState('password');
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
+
+  const navigateToLogIn = () => {
+    navigate('/sign-in');
+  };
 
   const changePasswordInputType = () => {
     if (passwordInputType === 'password') {
@@ -32,13 +40,12 @@ export default function SignIn() {
             <Header h1="Reset Your Password" />
             <form
               onSubmit={(e) => {
+                e.preventDefault();
                 if (!isPasswordConfirmed(password1, password2)) {
-                  e.preventDefault();
                   setError(true);
-                } else {
-                  setSuccess(true);
-                  e.preventDefault();
+                  return;
                 }
+                setSuccess(true);
               }}
             >
               <Input
@@ -66,10 +73,14 @@ export default function SignIn() {
         ) : (
           <>
             <Header h1="Password Changed" />
-            <p>You can use your new password to log into your account</p>
-            <form>
-              <Submit value="Log In" />
-              <Submit value="Go to Home" />
+            <p className="reset-password-p">
+              You can use your new password to log into your account
+            </p>
+            <form onSubmit={navigateToLogIn}>
+              <div className="reset-password-buttons">
+                <Submit value="Log In" />
+                <Button value="Go to Home" />
+              </div>
             </form>
           </>
         )}

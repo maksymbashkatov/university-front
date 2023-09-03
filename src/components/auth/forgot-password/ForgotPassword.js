@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '../common/header/Header';
 import Input from '../common/input/Input';
 import Submit from '../common/submit/Submit';
+import Button from '../common/button/Button';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -26,7 +27,7 @@ export default function SignIn() {
           />
           <div className="forgot-password-buttons">
             <Submit value="Reset" />
-            <Submit value="Cancel" />
+            <Button value="Cancel" />
           </div>
         </form>
       </div>

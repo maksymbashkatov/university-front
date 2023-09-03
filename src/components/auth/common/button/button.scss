@@ -1,0 +1,17 @@
+.reg-log-button {
+  height: 56px;
+  // background-color: #7101ff;
+  color: #2c343a;
+  font: {
+    size: 16px;
+    weight: 500;
+  }
+}
+
+.reg-log-button:hover {
+  color: #3333ff;
+}
+
+.reg-log-button:active {
+  color: #0000e0;
+}

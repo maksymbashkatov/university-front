@@ -1,30 +1,24 @@
 .header {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: minmax(auto, 260px) auto;
-  align-items: center;
+  grid-area: header;
   height: 72px;
   background-color: #f8f8f8;
-
-  img {
-    max-width: 43px;
-    background-color: inherit;
-  }
+  box-shadow: inset 0 -1px 0 0 #dee0e5;
 
   h1 {
+    align-self: center;
+    margin-left: 42px;
     font: {
       size: 24px;
       weight: 700;
     }
-    color: #000000;
-    background-color: inherit;
   }
 }
 
-.header__logo {
-  align-items: center;
-  height: 100%;
-  max-width: 260px;
-  background-color: #3f1e85;
-  box-shadow: inset 0px -1px 0px 0px rgb(255 255 255 / 8%);
+.header__images {
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 20px;
+  margin-right: 40px;
 }

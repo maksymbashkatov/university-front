@@ -9,16 +9,11 @@
   outline: 0px;
   border-radius: 0px;
 
-  font: {
-    family: $mainFont;
-    size: 14px;
-    weight: 400;
-  }
-
   color: $colorText;
   background-color: transparent;
 }
 
 .container {
   display: grid;
+  align-items: center;
 }

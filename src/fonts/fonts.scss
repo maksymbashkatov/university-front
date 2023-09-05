@@ -1,19 +1,38 @@
 @font-face {
   font-weight: 400;
   font-family: Lexend;
-  src: url("./Lexend-Regular.ttf");
+  src: url('./Lexend-Regular.ttf');
 }
 
 @font-face {
   font-weight: 500;
   font-family: Lexend;
-  src: url("./Lexend-Medium.ttf");
+  src: url('./Lexend-Medium.ttf');
 }
 
 @font-face {
   font-weight: 700;
   font-family: Lexend;
-  src: url("./Lexend-Bold.ttf");
+  src: url('./Lexend-Bold.ttf');
 }
 
-$mainFont: Lexend;
+@font-face {
+  font-weight: 400;
+  font-family: Nunito;
+  src: url('./Nunito-Regular.ttf');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Nunito;
+  src: url('./Nunito-Medium.ttf');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Nunito;
+  src: url('./Nunito-Bold.ttf');
+}
+
+$authMainFont: Lexend;
+$dashboardMainFont: Nunito;

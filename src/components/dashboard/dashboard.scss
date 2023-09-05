@@ -1,7 +1,15 @@
+@import '../../fonts/fonts.scss';
+
 .dashboard {
-  main {
-    display: grid;
-    grid-auto-flow: column;
-    height: 100vh;
+  grid-template-columns: minmax(auto, 260px) auto;
+  grid-template-rows: 72px auto;
+  grid-template-areas:
+    'aside header'
+    'aside main';
+
+  font: {
+    family: $dashboardMainFont;
+    size: 14px;
+    weight: 500;
   }
 }

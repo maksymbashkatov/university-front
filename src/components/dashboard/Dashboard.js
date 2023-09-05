@@ -7,11 +7,9 @@ import Content from './content/Content';
 export default function Dashboard() {
   return (
     <div className="dashboard container">
+      <Aside />
       <Header h1="Lectors" />
-      <main>
-        <Aside />
-        <Content />
-      </main>
+      <Content />
     </div>
   );
 }

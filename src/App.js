@@ -4,7 +4,8 @@ import SignIn from './components/auth/sign-in/SignIn';
 import SignUp from './components/auth/sign-up/SignUp';
 import ForgotPassword from './components/auth/forgot-password/ForgotPassword';
 import ResetPassword from './components/auth/reset-password/ResetPassword';
-import NoPage from './components/no-page/NoPage';
+import Dashboard from './components/dashboard/Dashboard';
+import NoPage from './pages/no-page/NoPage';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

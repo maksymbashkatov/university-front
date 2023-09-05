@@ -18,6 +18,9 @@ export default function MainPage() {
           <li>
             <Link to="/reset-password">ResetPassword</Link>
           </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
         </ul>
       </nav>
     </>

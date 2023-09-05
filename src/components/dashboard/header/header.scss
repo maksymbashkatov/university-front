@@ -1,0 +1,30 @@
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(auto, 260px) auto;
+  align-items: center;
+  height: 72px;
+  background-color: #f8f8f8;
+
+  img {
+    max-width: 43px;
+    background-color: inherit;
+  }
+
+  h1 {
+    font: {
+      size: 24px;
+      weight: 700;
+    }
+    color: #000000;
+    background-color: inherit;
+  }
+}
+
+.header__logo {
+  align-items: center;
+  height: 100%;
+  max-width: 260px;
+  background-color: #3f1e85;
+  box-shadow: inset 0px -1px 0px 0px rgb(255 255 255 / 8%);
+}

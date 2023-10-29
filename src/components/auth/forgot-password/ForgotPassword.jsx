@@ -1,13 +1,19 @@
-import '../common/styles/auth.scss';
+import '../auth.scss';
 import './forgot-password.scss';
 import { useState } from 'react';
-import Header from '../common/header/Header';
-import Input from '../common/input/Input';
-import Submit from '../common/submit/Submit';
-import Button from '../common/button/Button';
+import { useNavigate } from 'react-router-dom';
+import Header from '../header/Header';
+import Input from '../../common/input/Input';
+import Submit from '../../common/submit/Submit';
+import Button from '../../common/button/Button';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
+
+  const navigateToHome = () => {
+    navigate('/');
+  };
 
   return (
     <div className="authContainer">
@@ -27,7 +33,11 @@ export default function SignIn() {
           />
           <div className="forgot-password-buttons">
             <Submit value="Reset" />
-            <Button value="Cancel" />
+            <Button
+              onClick={navigateToHome}
+              className="reg-log-button"
+              value="Cancel"
+            />
           </div>
         </form>
       </div>

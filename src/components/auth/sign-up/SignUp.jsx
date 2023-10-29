@@ -1,9 +1,9 @@
-import '../common/styles/auth.scss';
+import '../auth.scss';
 import { useState } from 'react';
-import Header from '../common/header/Header';
-import Input from '../common/input/Input';
-import Checkbox from '../common/checkbox/Checkbox';
-import Submit from '../common/submit/Submit';
+import Header from '../header/Header';
+import Input from '../../common/input/Input';
+import Checkbox from '../../common/checkbox/Checkbox';
+import Submit from '../../common/submit/Submit';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');

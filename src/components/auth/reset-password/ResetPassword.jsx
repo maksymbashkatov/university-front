@@ -1,12 +1,12 @@
-import '../common/styles/auth.scss';
+import '../auth.scss';
 import '../reset-password/reset-password.scss';
 import { useState } from 'react';
+import Header from '../header/Header';
+import Input from '../../common/input/Input';
+import Checkbox from '../../common/checkbox/Checkbox';
+import Submit from '../../common/submit/Submit';
+import Button from '../../common/button/Button';
 import { useNavigate } from 'react-router-dom';
-import Header from '../common/header/Header';
-import Input from '../common/input/Input';
-import Checkbox from '../common/checkbox/Checkbox';
-import Submit from '../common/submit/Submit';
-import Button from '../common/button/Button';
 
 export default function SignIn() {
   const [password1, setPassword1] = useState('');
@@ -18,6 +18,10 @@ export default function SignIn() {
 
   const navigateToLogIn = () => {
     navigate('/sign-in');
+  };
+
+  const navigateToHome = () => {
+    navigate('/');
   };
 
   const changePasswordInputType = () => {
@@ -76,12 +80,18 @@ export default function SignIn() {
             <p className="reset-password-p">
               You can use your new password to log into your account
             </p>
-            <form onSubmit={navigateToLogIn}>
-              <div className="reset-password-buttons">
-                <Submit value="Log In" />
-                <Button value="Go to Home" />
-              </div>
-            </form>
+            <div className="reset-password-buttons">
+              <Button
+                onClick={navigateToLogIn}
+                className="reg-log-submit"
+                value="Log In"
+              />
+              <Button
+                onClick={navigateToHome}
+                className="reg-log-button"
+                value="Go to Home"
+              />
+            </div>
           </>
         )}
       </div>

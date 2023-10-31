@@ -1,9 +1,46 @@
-.main {
-  grid-area: main;
-  background-color: #f8f8f8;
-  height: 100%;
+.dashboard {
+  .main {
+    grid-area: main;
+    display: grid;
+    background-color: #f8f8f8;
+    height: 100%;
+    padding: 20px 40px;
+    align-content: start;
 
-  ul {
-    list-style-type: none;
+    ul {
+      list-style-type: none;
+      overflow: auto;
+      max-height: 50vh;
+    }
+
+    li {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 120px 120px 160px 120px;
+      font-size: 16px;
+      padding: 17px 0 17px 0;
+      justify-items: start;
+      width: 100%;
+      p {
+        width: 100%;
+      }
+    }
+
+    .ul-header {
+      font-weight: 600;
+      p {
+        color: #9f9fb6;
+      }
+    }
   }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  max-height: 43px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7101ff;
+  border-radius: 6px;
 }

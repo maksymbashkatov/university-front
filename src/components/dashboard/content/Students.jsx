@@ -11,7 +11,11 @@ function Student(props) {
   const { name, surname, email, age, group } = props;
   return (
     <li>
-      {name} | {surname} | {email} | {age} | {group}
+      <p>{name}</p>
+      <p>{surname}</p>
+      <p>{email}</p>
+      <p>{age}</p>
+      <p>{group}</p>
     </li>
   );
 }
@@ -47,6 +51,7 @@ export default function Students() {
       <h1>Add new student</h1>
       <form
         onSubmit={(e) => {
+          e.preventDefault();
           createStudent({
             name,
             surname,
@@ -103,8 +108,14 @@ export default function Students() {
         <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
           {modalContent}
         </Modal>
-        <ul>
-          <li>Name | Email</li>
+        <ul className="container">
+          <li className="container ul-header">
+            <p>Name</p>
+            <p>Surname</p>
+            <p>Email</p>
+            <p>Age</p>
+            <p>Group</p>
+          </li>
           {students.map((student) => (
             <Student
               key={student.id}

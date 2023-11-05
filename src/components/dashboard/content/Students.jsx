@@ -59,7 +59,10 @@ export default function Students() {
             age,
             imagePath: 'testImagePath',
           })
-            .then(console.log)
+            .then((response) => {
+              setStudents([...students, response.data.result]);
+              closeModal();
+            })
             .catch(console.log);
         }}
       >
